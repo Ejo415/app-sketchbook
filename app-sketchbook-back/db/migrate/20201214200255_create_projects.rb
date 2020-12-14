@@ -6,7 +6,7 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :goals
       t.string :languages
       t.string :notepad
-      t.boolean :completed
+      t.boolean :completed, default: false
       t.belongs_to :user, foreign_key: true
 
       t.timestamps

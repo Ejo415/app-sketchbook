@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_200255) do
     t.string "goals"
     t.string "languages"
     t.string "notepad"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
