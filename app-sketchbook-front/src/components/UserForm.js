@@ -1,11 +1,11 @@
 import React from 'react';
 
-const UsersIndex = () => {
+const UserForm = () => {
     return (
         <div>
-            <h1>Users:</h1>
+            <h4>Add User</h4>
         </div>
     );
 }
 
-export default UsersIndex;
+export default UserForm;
