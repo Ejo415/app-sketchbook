@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  
+
  def index 
   users = User.all
 
@@ -9,10 +9,10 @@ class UsersController < ApplicationController
  end
 
  def create 
-  byebug
+  #byebug
   user = User.new(user_params)
-  if player.save 
-    render json: player
+  if user.save 
+    render json: user
   end
  end
 
