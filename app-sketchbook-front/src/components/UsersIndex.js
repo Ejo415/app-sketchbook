@@ -11,7 +11,7 @@ class UsersIndex extends React.Component {
         return (
             <div>
                 <h1>Users:</h1>
-                {this.props.users.map(user => <UserListItem user={user}/>)}
+                {this.props.users.map(user => <UserListItem user={user} key={user.id} />)}
             </div>
         );
     }
