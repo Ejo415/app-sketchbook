@@ -1,7 +1,7 @@
 function userReducer(state = { all: [] }, action) {
     switch(action.type) {
         case "FETCH_USERS_SUCCESS" :
-            return { ...state, users: action.payload };
+            return { ...state, all: action.payload };
         default:
             return state;
     }
