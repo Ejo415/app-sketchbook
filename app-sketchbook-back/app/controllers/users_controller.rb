@@ -4,16 +4,19 @@ class UsersController < ApplicationController
 
  def index 
   users = User.all
-
-  render :json => users, except: [:password_digest]
+    render :json => users, except: [:password_digest]
  end
 
- def create 
-  #byebug
-  user = User.new(user_params)
-  if user.save 
+ def show
+  user = User.find(params[:id])
     render json: user
-  end
+ end
+
+ def create
+  user = User.new(user_params)
+    if user.save 
+      render json: user
+    end
  end
 
 private
