@@ -4,6 +4,11 @@ function userReducer(state = { all: [] }, action) {
             return { ...state, all: action.payload };
         default:
             return state;
+
+        case "CREATE_USER_SUCCESS" :
+            return {...state, all: state.all.concat(action.payload) };
+            default:
+                return state;
     }
 
 }
