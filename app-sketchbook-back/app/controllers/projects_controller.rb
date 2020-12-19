@@ -11,9 +11,18 @@ class ProjectsController < ApplicationController
     user = User.find_by_id(params[:user][:id])
         
     project = user.projects.build(create_params)
-    byebug
+    #byebug
    if project.save 
      render json: project
+    end
+  end
+
+  def update 
+    project = Project.find(params[:id])
+    project.update(edit_params)
+    #byebug
+    if project.save
+      render json: project
     end
   end
 
@@ -24,6 +33,6 @@ class ProjectsController < ApplicationController
   end
 
   def edit_params
-    params.require(:project).permit(:concept, :title, :goals, :languages, :notepad, :completed)
+    params.require(:project).permit(:id, :concept, :title, :goals, :languages, :notepad, :completed)
   end
 end
