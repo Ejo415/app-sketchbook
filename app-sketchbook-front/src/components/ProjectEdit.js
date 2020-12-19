@@ -75,12 +75,10 @@ const mapStateToProps = ({ projects }, props) => {
     const project = projects.all.filter(p =>
      p.id === projectId
     );
-
     return {
       project
       };
-    
-  };
+    };
   
 
 export default connect(mapStateToProps, { editProject })(ProjectEdit);
