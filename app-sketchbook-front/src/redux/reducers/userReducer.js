@@ -3,9 +3,6 @@ function userReducer(state = { all: [] }, action) {
     case "FETCH_USERS_SUCCESS":
       return { ...state, all: action.payload };
 
-    case "FETCH_USER_SUCCESS":
-      return { ...state, all: action.payload };
-
     case "CREATE_USER_SUCCESS":
       return { ...state, all: [...state.all, action.payload] };
     default:
