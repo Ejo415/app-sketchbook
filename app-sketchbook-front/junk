@@ -2,3 +2,5 @@
         {this.props.users.map((user) => (
           <UserListItem user={user} key={user.id} />
         ))}
+
+        {console.log(this.props.projects)}
