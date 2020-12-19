@@ -14,14 +14,14 @@ class CompletedShow extends Component {
        
       <div>
       
-
-      <h1>{this.props.project[0].title}</h1>
+        <h1>App Overview</h1>
+      <h2>{this.props.project[0].title}</h2>
         <br></br>
-      {this.props.project[0].goals}
+      <h2>Goals:</h2>{this.props.project[0].goals}
         <br></br>
-      {this.props.project[0].languages}
+      <h2>Languages:</h2>{this.props.project[0].languages}
           <br></br>
-    {this.props.project[0].notepad} 
+   <h2>Notes:</h2> {this.props.project[0].notepad} 
       </div>
     );
   }

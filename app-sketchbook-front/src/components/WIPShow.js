@@ -32,12 +32,13 @@ class WIPShow extends Component {
        
       <div>
       
-
-      <h1>{this.props.project[0].title}</h1>
+        <h1>App Overview</h1>
+      <h2>{this.props.project[0].title}</h2>
         <br></br>
-      {this.props.project[0].goals}
+      <h3>Goals:</h3>{this.props.project[0].goals}
         <br></br>
-      {this.props.project[0].languages}
+      <h3>Languages:</h3>{this.props.project[0].languages}
+          <br></br>
           <br></br>
           <form onSubmit={this.submit}>
           Notepad:{" "}
