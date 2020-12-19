@@ -6,6 +6,9 @@ import UsersIndex from "./components/UsersIndex";
 import UserForm from "./components/UserForm";
 import ProjectForm from "./components/ProjectForm";
 import UserShow from "./components/UserShow";
+import WIPShow from "./components/WIPShow";
+import ProjectEdit from "./components/ProjectEdit";
+import CompleteShow from "./components/CompleteShow";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="/user/new" component={UserForm} />
           <Route path="/project/:id/new" component={ProjectForm} />
           <Route path="/users/:id" component={UserShow} />
+          <Route path="/projects/:id" component={WIPShow} />
+          <Route path="/project/:id/edit" component={ProjectEdit} />
+          <Route path="/project/:id/complete" component={CompleteShow} />
         </Switch>
       </Router>
     </div>
