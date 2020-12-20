@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { editProject } from "../redux/actions/projectActions";
 import { connect } from "react-redux";
+import Form from 'react-bootstrap/Form'
 
 class ProjectEdit extends Component {
   
@@ -33,7 +34,26 @@ class ProjectEdit extends Component {
       
         <h1>Expand on Your Idea</h1>
         <h3>Concept: {this.props.project[0].concept} </h3>
-        <form onSubmit={this.submit}>
+        <Form onSubmit={this.submit}>
+{/*      
+        <Form.Group controlId="Project_Edit">
+        <Form.Label>Title</Form.Label>
+        <Form.Control type="text" placeholder="Enter a Title" onChange={(e) => this.setState({ title: e.target.value })}
+            
+            value={this.state.title} />
+            <br></br>
+        <Form.Control type="text" placeholder="Share your Goals" onChange={(e) => this.setState({ goals: e.target.value })}
+           
+            value={this.state.goals} />
+            <br></br>
+        <Form.Control type="text" placeholder="Enter your Languages" onChange={(e) => this.setState({ langauges: e.target.value })}
+            
+            value={this.state.languages} />
+            <br></br>
+        <Form.Control as="textarea" placeholder="Notes" onChange={(e) => this.setState({ notepad: e.target.value })}
+            
+            value={this.state.notepad} />
+        </Form.Group> */}
           <br></br>
           Title:{" "}
           <input
@@ -59,12 +79,12 @@ class ProjectEdit extends Component {
           Notepad:{" "}
           <input
             onChange={(e) => this.setState({ notepad: e.target.value })}
-            type="text"
+            as="textarea"
             value={this.state.notepad}
           />
           <br></br>
           <input type="submit" value="Begin Project" />
-        </form>
+        </Form>
       </div>
     );
   }

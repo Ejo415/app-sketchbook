@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getProjects } from "../redux/actions/projectActions";
@@ -11,15 +12,21 @@ class UserShow extends React.Component {
     this.props.getProjects();
   }
 
+
+
   render() {
+     // debugger
     return (
       <div>
         <h1>Welcome</h1>
         <h3>{this.props.user.name}</h3>
         <br></br>{" "}
+        
         <Link to={`/project/${this.props.user.id}/new`}>
-          <button type="button">Have an Idea</button>
+        <Button variant="warning">Have an Idea</Button>
+          {/* <button type="button">Have an Idea</button> */}
         </Link>
+        <br></br>
         <h4>Ideas</h4>
         {this.props.projects.map((project) => (
           <ProjectListConcepts project={project} key={project.id} />

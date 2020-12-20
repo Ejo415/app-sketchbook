@@ -14,10 +14,12 @@ class ProjectForm extends Component {
     this.setState({
       concept: "",
     });
-    this.props.history.push(`/users/${this.props.user.id}`);
+    console.log(this.props)
+    this.props.history.push(`/users/${this.props.match.params.id}`);
   };
 
   render() {
+     // debugger
     return (
       <div>
         <h1>Have an Idea</h1>
